@@ -3,3 +3,18 @@
 </p>
 
 # Ejecutando el proyecto
+
+1. clonar el repositorio
+```
+git clone https://github.com/velfin13/pokedex.git
+```
+
+2. instalar las dependencias
+```
+npm install
+```
+
+3. levantar el proyecto en modo desarrollo
+```
+npm run dev:start
+```
