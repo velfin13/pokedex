@@ -17,7 +17,8 @@ export class SeedService {
   private readonly axios: AxiosInstance = axios;
 
   async executeSeed() {
-    const { data } = await this.axios.get<PokeResponse>('https://pokeapi.co/api/v2/pokemon?limit=30');
+    await this.pokemonModel.deleteMany({});
+    const { data } = await this.axios.get<PokeResponse>('https://pokeapi.co/api/v2/pokemon?limit=80');
     data.results.forEach(async ({ name, url }) => {
       const segment = url.split('/');
       const no: number = +segment[6];
